@@ -1,0 +1,11 @@
+.container-fluid{
+    height: 100vh;
+    background-color:papayawhip;
+}
+a{
+    cursor: pointer;
+}
+#col-form{
+    border: 1px solid rgb(241, 49, 113);
+    margin-left: 150px;
+}

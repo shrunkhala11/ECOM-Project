@@ -1,0 +1,20 @@
+#h1{
+    font-size:50px;
+    letter-spacing: 12px;
+    color:blueviolet;
+    margin-top:45px;
+}
+.trends{
+    height:120px;
+}
+.trends>.col-md-11{
+    border: 1px  solid blueviolet;
+    box-shadow: 2px 2px blueviolet;
+    border-bottom-right-radius:100px;
+    border-top-left-radius: 100px;
+    background-color:rgb(224, 199, 248);
+}
+.container-fluid{
+    height: 100vh;
+    background-color:papayawhip;
+}
