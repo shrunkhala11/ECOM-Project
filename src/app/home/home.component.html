@@ -1,13 +1,23 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6 p-2 ">
-              carosal
+        <div class=" col-md-6 p-2 " id="firstrow">
+              <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"   >
+                 <div class="carousel-inner"   >
+                    <div *ngFor="let i of Productsforsilder" class="carousel-item active"  data-bs-interval="1000"> 
+                         <img src="{{i.image}}"  alt="" height="500px"  class="w-100 img img-thumbnail">
+                         <div class="carousel-caption d-none d-md-block">
+                             <h1 class="text-light">{{i.name}}</h1>
+                             <p class="text-center">{{i.description}}</p>
+                         </div>
+                    </div>
+                 </div>
+              </div>
         </div>
-        <div class="col-md-6 p-2">
-            <img src="./assets/img/immg1.jpg" width="750px" class="img-thumbnail" alt="">
+        <div class="col-md-6 p-2" id="firstrow">
+            <img src="./assets/img/immg1.jpg" width="750px"  class="img-thumbnail" alt="">
         </div>
     </div>
-    <div class="row trends  justify-content-center">
+    <div class="row m-2 trends  justify-content-center">
            <div class="col-md-11">
                 <h1 id="h1" class="text-center">TRENDS</h1>
            </div>

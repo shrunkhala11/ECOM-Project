@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import login, { Signup } from '../core/datatype';
+import { SellerService } from '../core/seller.service';
 
 @Component({
   selector: 'app-seller-auth',
@@ -17,12 +20,19 @@ export class SellerAuthComponent implements OnInit {
     email:new FormControl('',Validators.required),
     password:new FormControl('',Validators.required)
   })
-  constructor() { }
-  SellerSignUp(value:FormGroup){
-     console.log(this.sellersignupform.value)
+  constructor(private userseller:SellerService,private route:Router) { }
+  SellerSignUp(value:Signup){
+    //  console.log(this.sellersignupform.value)
+     this.userseller.saveseller(this.sellersignupform.value).subscribe((res)=>{
+      console.log("save seller",res)
+      localStorage.setItem('seller',JSON.stringify(res));
+      this.route.navigate(['/sellerhome'])
+     })
   }
-  sellerlogin(value:FormGroup){
+  sellerlogin(value:login){
  console.log(this.sellerloginform.value)
+   this.route.navigate(['/sellerhome'])  ///optional
+     
   }
   signin:any;
   forsignup(){

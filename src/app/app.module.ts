@@ -10,14 +10,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
-
+import {HttpClientModule} from '@angular/common/http';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ProductlistComponent } from './productlist/productlist.component';
+import { SellerhomeComponent } from './sellerhome/sellerhome.component'
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    SellerAuthComponent
+    SellerAuthComponent,
+    AddProductComponent,
+    ProductlistComponent,
+    SellerhomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,8 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

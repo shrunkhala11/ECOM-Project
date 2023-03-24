@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <span class="text-center">ALL PRODUCT DETAILS</span>
+    </div>
+    <div class="row p-5  justify-content-center">
+    <div class="col-sm-12 col-md-10 ">
+      <table class="table-bordered table striped table-hover table-info" [ngStyle]="{'text-align':'center'}">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>IMAGE</th>
+                <th>CATEGORY</th>
+                <th>PRIZE</th>
+                <th>COLOUR</th>
+                <th>DISCRIPTION</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let i of AllProducts">
+                <td>{{i.name}}</td>
+                <td><img src="{{i.image}}" height="100px" width="150px"></td>
+                <td>{{i.category}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.color}}</td>
+                <td>{{i.description}}</td>
+            </tr>
+         </tbody>
+      </table>
+    </div>
+    </div>
+</div>

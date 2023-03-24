@@ -1,0 +1,12 @@
+.container-fluid{
+    height: 100vh;
+    background-color:papayawhip;
+}   
+span{
+    font-size:36px;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    margin-top:25px;
+    color: deeppink;
+    text-shadow: 2px 2px gold;
+}

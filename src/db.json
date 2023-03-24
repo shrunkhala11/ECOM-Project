@@ -1,0 +1,49 @@
+{
+  "seller": [
+    {
+      "name": "shrunkhala",
+      "password": "shrunkhala",
+      "email": "shrunkhal1925@gmail.com"
+    },
+    {
+      "name": "Shrunkhala ",
+      "email": "shrunkhal1925@gmail.com",
+      "password": "shrunkhal25",
+      "id": 5
+    },
+    {
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "password": "abc",
+      "id": 8
+    }
+  ],
+  "products": [
+    {
+      "name": "HP Laptop",
+      "price": "50000",
+      "category": "Laptop",
+      "color": "black",
+      "description": "Hp laptop for student and professionals",
+      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg"
+    },
+    {
+      "name": "samsung Laptop",
+      "price": "64000",
+      "category": "Laptop",
+      "color": "silver",
+      "description": "Samsung laptop for student and professionals",
+      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
+      "id": 3
+    },
+    {
+      "name": "WallClock",
+      "price": 1000,
+      "category": "Watch",
+      "color": "brown",
+      "description": "the best clock",
+      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
+      "id": 4
+    }
+  ]
+}
