@@ -13,7 +13,8 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductlistComponent } from './productlist/productlist.component';
-import { SellerhomeComponent } from './sellerhome/sellerhome.component'
+import { SellerhomeComponent } from './sellerhome/sellerhome.component';
+import { UserAuthComponent } from './user-auth/user-auth.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { SellerhomeComponent } from './sellerhome/sellerhome.component'
     SellerAuthComponent,
     AddProductComponent,
     ProductlistComponent,
-    SellerhomeComponent
+    SellerhomeComponent,
+    UserAuthComponent
   ],
   imports: [
     BrowserModule,

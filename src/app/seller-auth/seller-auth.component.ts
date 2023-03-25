@@ -44,7 +44,6 @@ export class SellerAuthComponent implements OnInit {
   }
   ngOnInit(): void {
     this.forsignup();
-    
   }
 
 }

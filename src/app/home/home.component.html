@@ -4,7 +4,7 @@
               <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"   >
                  <div class="carousel-inner"   >
                     <div *ngFor="let i of Productsforsilder" class="carousel-item active"  data-bs-interval="1000"> 
-                         <img src="{{i.image}}"  alt="" height="500px"  class="w-100 img img-thumbnail">
+                         <img src="{{i.image}}"  alt="" height="480px"  class=" mt-1 img w-100">
                          <div class="carousel-caption d-none d-md-block">
                              <h1 class="text-light">{{i.name}}</h1>
                              <p class="text-center">{{i.description}}</p>
@@ -14,7 +14,7 @@
               </div>
         </div>
         <div class="col-md-6 p-2" id="firstrow">
-            <img src="./assets/img/immg1.jpg" width="750px"  class="img-thumbnail" alt="">
+            <img src="./assets/img/immg1.jpg"  height="480px" class=" mt-1 w-100" alt="">
         </div>
     </div>
     <div class="row m-2 trends  justify-content-center">
@@ -23,6 +23,30 @@
            </div>
     </div>
     <div class="row">
-        productlist
+        <div class="col-md-3 " *ngFor="let p of Productsforsilder">
+            <mat-card class="example-card ">
+              <img mat-card-image src="{{p.image}}"  height="200px" class="w-100 m-1"  alt="Photo">
+             <mat-card-content class="m-2">
+                 <table >
+                    <tr>
+                        <td class="h5">NAME : </td>
+                        <td class="text-center">{{p.name}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h5">PRICE : </td>
+                        <td class="text-center">{{p.price}}</td>
+                    </tr>
+                    <tr>
+                        <td class="h5">COLOR : </td>
+                        <td class="text-center">{{p.color}}</td>
+                    </tr>
+                 </table>
+             </mat-card-content>
+             <mat-card-actions>
+                <button mat-button class="text-primary">Veiw Details</button>
+                <button mat-button class="text-danger">Add to Card</button>
+             </mat-card-actions>
+            </mat-card>
+        </div>
     </div>
 </div>

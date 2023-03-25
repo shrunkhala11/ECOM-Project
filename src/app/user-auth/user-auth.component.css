@@ -1,0 +1,15 @@
+.container-fluid{
+    height: 100vh;
+    background-image: url('src/assets/img/user1.jpg');
+    /* background-image: url('src/assets/img/shping.jpg'); */
+    background-repeat: no-repeat;
+    background-position:right;
+}
+a{
+    cursor: pointer;
+}
+#col-form{
+    height: 450px;
+    border: 2px solid rgb(241, 49, 113);
+    margin-left: 150px;
+}

@@ -3,7 +3,7 @@
         <span class="text-center">ALL PRODUCT DETAILS</span>
     </div>
     <div class="row p-5  justify-content-center">
-    <div class="col-sm-12 col-md-10 ">
+    <div class="col-sm-12 col-md-11 ">
       <table class="table-bordered table striped table-hover table-info" [ngStyle]="{'text-align':'center'}">
         <thead>
             <tr>
@@ -13,6 +13,8 @@
                 <th>PRIZE</th>
                 <th>COLOUR</th>
                 <th>DISCRIPTION</th>
+                <th colspan="2">ACTION</th>
+                <!-- <th></th> -->
             </tr>
          </thead>
          <tbody>
@@ -23,6 +25,8 @@
                 <td>{{i.price}}</td>
                 <td>{{i.color}}</td>
                 <td>{{i.description}}</td>
+                <td><mat-icon color="primary">update</mat-icon></td>
+                <td><mat-icon color="warn">delete</mat-icon></td>
             </tr>
          </tbody>
       </table>

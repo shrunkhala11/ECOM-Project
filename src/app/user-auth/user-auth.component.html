@@ -1,0 +1,74 @@
+<div class="container-fluid" *ngIf="!usersignin">
+    <div class="row " >
+       <div class="col-md-3  mt-5 mb-5 p-4" id="col-form">               
+        <div class="row ">
+                   <h1 class="text-center text-primary">User Sign-Up</h1>
+               </div>
+               <div class="row justify-content-center mt-3">
+                   <div class="col-md-10">
+                      <form action="" [formGroup]="usersignupform">
+                          <div class="row">      
+                           <mat-form-field class="feild_input" appearance="outline">
+                               <input name="name" formControlName="name" matInput
+                                   placeholder="Enter Name">
+                          </mat-form-field>
+                          <mat-form-field class="feild_input" appearance="outline">
+                            <input name="email" formControlName="email" matInput
+                                placeholder="Enter Email">
+                       </mat-form-field>
+                          <mat-form-field class="feild_input" appearance="outline">
+                           <input formControlName="password" name="password" matInput
+                               placeholder="Enter Password..">
+                          </mat-form-field>
+                          <div class="container text-center mb-3">
+                           <button type="submit" mat-raised-button color="accent" (click)="UserSignUp(usersignupform)">SignUp</button>
+                           <!-- <button class="m-2" type="reset" mat-raised-button color="primary" (click)="reset(sellersign)">Reset</button> -->
+                       </div>
+                         <span>Already have an Account? <a (click)="forusersignin()" class="text-primary">Click Here</a></span>
+                          </div>
+                      </form>
+                   </div>
+               </div>
+                   </div>
+
+        <!-- <div class="col-md-6  mt-5 mb-5 p-5">
+            <img src="./assets/img/learn-2.jpg" height="350px" [ngStyle]="{'margin-left':'150px'}" alt="">
+        </div> -->
+    </div>
+</div>
+
+<div class="container-fluid" *ngIf="usersignin">
+    <div class="row justify-content-start">
+       <div class="col-md-3 mt-5 mb-5" id="col-form">
+               <div class="row m-3">
+                   <h1 class="text-center text-primary">User Sign-In</h1>
+               </div>
+               <div class="row justify-content-center mt-3">
+                   <div class="col-md-10">
+                      <form action="" [formGroup]="userloginform">
+                          <div class="row">      
+                          
+                          <mat-form-field class="feild_input" appearance="outline">
+                            <input name="email" formControlName="email" matInput
+                                placeholder="Enter Email">
+                       </mat-form-field>
+                          <mat-form-field class="feild_input" appearance="outline">
+                           <input formControlName="password" name="password" matInput
+                               placeholder="Enter Password..">
+                          </mat-form-field>
+                          <div class="container text-center mb-3">
+                           <button type="submit" mat-raised-button color="accent" (click)="userlogin(sellerloginform)">SignIn</button>
+                           <!-- <button class="m-2" type="reset" mat-raised-button color="primary" (click)="reset(sellersign)">Reset</button> -->
+                       </div>
+                         <span>Want to Create an Account? <a (click)="forusersignup()" class="text-primary">Click Here</a></span>
+                          </div>
+                      </form>
+                   </div>
+               </div>
+       </div>
+       <!-- <div class="col-md-6  mt-3 mb-5 p-5">
+        <img src="./assets/img/learn-2.jpg" height="350px" [ngStyle]="{'margin-left':'150px'}" alt="">
+    </div> -->
+    </div>
+
+</div>
