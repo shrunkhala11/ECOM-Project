@@ -19,14 +19,14 @@
          </thead>
          <tbody>
             <tr *ngFor="let i of AllProducts">
-                <td>{{i.name}}</td>
+                <td>{{i.name|uppercase}}</td>
                 <td><img src="{{i.image}}" height="100px" width="150px"></td>
                 <td>{{i.category}}</td>
                 <td>{{i.price}}</td>
                 <td>{{i.color}}</td>
                 <td>{{i.description}}</td>
-                <td><mat-icon color="primary">update</mat-icon></td>
-                <td><mat-icon color="warn">delete</mat-icon></td>
+                <td><a><mat-icon color="primary" routerLink="/updateproduct/{{i.id}}">update</mat-icon></a></td>
+                <td><a (click)="delet(i.id)"><mat-icon color="warn" >delete</mat-icon></a></td>
             </tr>
          </tbody>
       </table>

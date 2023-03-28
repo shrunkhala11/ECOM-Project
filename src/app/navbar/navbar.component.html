@@ -2,25 +2,35 @@
   <div class="row ">
     <nav class="navbar navbar-expand-md  bg-warning navbar-warning">
     <div class="col-md-2 text-center pt-3">
-        <a href="" class="navbar-brand"><h1><b>QuickShop</b></h1></a>
+        <a href="" class="navbar-brand"><h1 class=""><b>QuickShop</b></h1></a>
         <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#mynav">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
     <div class="collapse navbar-collapse " id="mynav">
-    <div class="col-md-7 ">
-        <form class="d-flex" role="search">
+    <div class="col-md-7" >
+        <div *ngIf="type === 'normal'">
+          <form class="d-flex" role="search" >
             <input class="form-control m-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-primary m-2" type="submit">Search</button>
           </form>
+        </div>
     </div>
+    
     <div class="col-md-3">
-            <ul class="navbar-nav ">
+            <ul class="navbar-nav " *ngIf="type === 'normal'">
                 <li class="nav-item"><a class="nav-link " routerLink="seller">Seller</a></li>
                 <li class="nav-item"><a class="nav-link " href="">Home</a></li>
                 <li class="nav-item"><a  class="nav-link " routerLink="user">Login</a></li>
                 <li class="nav-item"><a class="nav-link " href="">Card</a></li>
             </ul>
+
+            <ul class="navbar-nav " *ngIf="type === 'seller'">
+              <li class="nav-item "><a class="nav-link " >Seller</a></li>
+              <li class="nav-item "><a class="nav-link " routerLink="/addproduct">+Product</a></li>
+              <li class="nav-item "><a  class="nav-link " routerLink="list">List</a></li>
+              <li class="nav-item "><a class="nav-link " >LogOut</a></li>
+          </ul>
             </div>
     </div>
 </nav>

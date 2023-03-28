@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="row p-3">
+       <div class="col-md-4 mt-2">
+    <mat-card>
+      <div class="row header justify-content-center">
+            <h1 class="text-center text-danger" [ngStyle]="{'letter-spacing':'4px','font-size':'32px'}"><b>Update Products</b></h1>
+      </div>
+      <div class="row justify-content-center">
+         <form action="" [formGroup]="Updateproduct" >
+            <div class="row">    
+              <mat-form-field class="email_input" appearance="outline">
+                <mat-label class="h6">Products ID</mat-label>
+                <input type="number" name="id" formControlName="id" matInput
+                    placeholder="Enter Products ID...">
+           </mat-form-field>
+
+                <mat-form-field class="email_input" appearance="outline">
+                    <mat-label class="h6">Products Name</mat-label>
+                    <input type="text" name="name" formControlName="name" matInput
+                        placeholder="Enter Products Name...">
+               </mat-form-field>
+
+               <mat-form-field class="email_input" appearance="outline">
+                <mat-label class="h6">Products price</mat-label>
+                <input type="number"  name="price" formControlName="price" matInput
+                    placeholder="Enter Products price...">
+              </mat-form-field>
+
+              <mat-form-field class="email_input" appearance="outline">
+                <mat-label class="h6">Products category</mat-label>
+                <input type="text" name="category" formControlName="category" matInput
+                    placeholder="Enter Products category...">
+              </mat-form-field>
+
+              <mat-form-field class="email_input" appearance="outline">
+                 <mat-label class="h6">Products color</mat-label>
+                 <input type="text"  name="color" formControlName="color" matInput
+                placeholder="Enter Products color...">
+              </mat-form-field>
+
+              <mat-form-field class="email_input" appearance="outline">
+                <mat-label class="h6">Products description</mat-label>
+                <input type="text" name="description" formControlName="description" matInput
+                    placeholder="Enter Products description...">
+           </mat-form-field>
+               
+           <mat-form-field class="email_input" appearance="outline">
+            <mat-label class="h6">Products image URL</mat-label>
+            <input type="url" name="image" formControlName="image" matInput
+                placeholder=" Products image URL...">
+       </mat-form-field>
+
+       <div class="container text-center">
+        <button type="submit" mat-raised-button color="accent" (click)="updateproduct(Updateproduct)">Update Product</button>
+        <button class="m-2" type="reset" mat-raised-button color="primary">Reset</button>
+    </div>
+           
+            </div>
+         </form>
+      </div>
+    </mat-card>
+       </div>
+    </div>
+</div>

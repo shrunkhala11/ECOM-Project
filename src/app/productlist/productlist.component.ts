@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 import { ProductService } from '../core/product.service';
 
 @Component({
@@ -14,7 +15,11 @@ AllProducts:any;
       console.log(res);
     })
    }
-   
+   delet(id:number){
+      this.user.deletproduct(id).subscribe((res)=>{
+        Swal.fire('Deleted',"Product Remove  Successfully")
+      })
+   }
   ngOnInit(): void {
   }
 

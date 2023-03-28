@@ -8,10 +8,15 @@ import { ProductService } from '../core/product.service';
 })
 export class HomeComponent implements OnInit {
  Productsforsilder:any;
+ allProducts:any;
   constructor(private userpro:ProductService) { 
     this.userpro.getallProduct().subscribe((res)=>{
-         this.Productsforsilder=res;
-         console.log(this.Productsforsilder)
+         this.allProducts=res;
+         console.log("all products",this.allProducts)
+    });
+    this.userpro.getpopularProduct().subscribe((res)=>{
+      this.Productsforsilder=res;
+      console.log("for silder",this.Productsforsilder)
     })
   }
   

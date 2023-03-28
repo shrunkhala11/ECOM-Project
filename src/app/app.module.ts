@@ -14,7 +14,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { SellerhomeComponent } from './sellerhome/sellerhome.component';
-import { UserAuthComponent } from './user-auth/user-auth.component'
+import { UserAuthComponent } from './user-auth/user-auth.component';
+import { UpdateProductComponent } from './update-product/update-product.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { UserAuthComponent } from './user-auth/user-auth.component'
     AddProductComponent,
     ProductlistComponent,
     SellerhomeComponent,
-    UserAuthComponent
+    UserAuthComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,

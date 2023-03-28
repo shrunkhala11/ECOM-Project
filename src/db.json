@@ -32,39 +32,76 @@
   ],
   "products": [
     {
-      "name": "HP Laptop",
-      "price": "50000",
-      "category": "Laptop",
-      "color": "black",
-      "description": "Hp laptop for student and professionals",
-      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg"
-    },
-    {
-      "name": "samsung Laptop",
-      "price": "64000",
-      "category": "Laptop",
-      "color": "silver",
-      "description": "Samsung laptop for student and professionals",
-      "image": "https://d3nn873nee648n.cloudfront.net/900x600/19107/220-SM896508.jpg",
-      "id": 3
+      "id": 3,
+      "name": "Vivo",
+      "price": 22000,
+      "category": "Android Phones",
+      "color": "Balck",
+      "description": "64 GB storage, 8 GB ram ,32px camera",
+      "image": "https://d3nn873nee648n.cloudfront.net/900x600/19107/220-SM896508.jpg"
     },
     {
       "name": "WallClock",
-      "price": 1000,
-      "category": "Watch",
-      "color": "white",
+      "price": 5000,
+      "category": "Wall Watch",
+      "color": "black",
       "description": "the best clock",
       "image": "https://d3nn873nee648n.cloudfront.net/900x600/5137/8-SM139656.jpg",
       "id": 4
     },
     {
-      "name": "Silk Sari",
+      "name": "Samsung Laptop",
+      "price": 64000,
+      "category": "Laptops",
+      "color": "Silver",
+      "description": "12 generation I5 Processor",
+      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
+      "id": 6
+    },
+    {
+      "name": "Lehanga",
+      "price": 20000,
+      "category": "Womens ethetic wear",
+      "color": "Light green and yellow",
+      "description": "combo pack",
+      "image": "https://d3nn873nee648n.cloudfront.net/900x600/19150/14-SM900821.jpg",
+      "id": 7
+    },
+    {
+      "name": "Childern Goglas",
+      "price": 200,
+      "category": "Eye glasses",
+      "color": "All colour",
+      "description": "4 combo packk",
+      "image": "https://d3nn873nee648n.cloudfront.net/900x600/15402/220-SM619997.jpg",
+      "id": 8
+    },
+    {
+      "name": "Winter wear",
       "price": 1500,
-      "category": "Sari",
-      "color": "Red",
-      "description": "Silk sari",
-      "image": "https://d3nn873nee648n.cloudfront.net/900x600/16440/220-SM731301.jpg",
-      "id": 5
+      "category": "Woollen Cloths",
+      "color": "All colour",
+      "description": "sweater , mufler",
+      "image": "https://d3nn873nee648n.cloudfront.net/900x600/16179/220-SM682318.jpg",
+      "id": 9
+    },
+    {
+      "name": "Formal Shoes",
+      "price": 800,
+      "category": "Shoes",
+      "color": "balck",
+      "description": "Shoes",
+      "image": "https://d3nn873nee648n.cloudfront.net/900x600/19194/120-SM904376.jpg",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "name": "Ball",
+      "price": 300,
+      "category": "Children tous",
+      "color": "All color",
+      "description": "favourite  toy of childrenvce",
+      "image": "https://d3nn873nee648n.cloudfront.net/900x600/10413/19-SM290679.jpg"
     }
   ]
 }
