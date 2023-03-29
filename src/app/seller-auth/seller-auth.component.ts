@@ -28,24 +28,27 @@ export class SellerAuthComponent implements OnInit {
      this.userseller.saveseller(this.sellersignupform.value).subscribe((res)=>{
       console.log("save seller",res)
       localStorage.setItem('seller',JSON.stringify(res));
-      this.route.navigate(['/list'])
+      this.route.navigate(['/sellerhome'])
      })
   }
   
+  reloadseller(){
+    if(localStorage.getItem('seller')){
+      this.route.navigate(['/sellerhome'])
+    }
+  }
   sellerlogin(value:login){
       console.log(this.sellerloginform.value)
-       this.userseller.signinseller(this.sellerloginform.value).subscribe((res:any)=>{
-            console.log("sign in",res);
-            this.route.navigate(['/list'])
-  //         if(res && res.body && res.body.length===1){
-  //   localStorage.setItem('seller',JSON.stringify(res.body));
-  //   this.route.navigate(['/list'])
-
-  // }else{
-  //     // Swal.fire("emailid and Password is incorrect")
-  // }
-})
-     
+      this.userseller.signinseller(this.sellerloginform.value).subscribe((res:any)=>{
+        console.log("this is servie res",res);
+        if(res){
+          console.log("user log in");
+          localStorage.setItem('seller',JSON.stringify(res));
+      this.route.navigate(['/sellerhome'])
+        }else{
+          console.log("login failed")
+        }
+      })   
   }
   signin:any;
   forsignup(){

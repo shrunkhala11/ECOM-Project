@@ -17,7 +17,8 @@ export class NavbarComponent implements OnInit {
     this.Router.navigate(['/']);
     this.type='normal';
   }
-  getseller(){
+
+  ngOnInit(): void {
     this.Router.events.subscribe((res:any)=>{
       console.log("responce for route",res.url);
       if(res.url){
@@ -26,7 +27,7 @@ export class NavbarComponent implements OnInit {
              console.log("this is seller");
              this.sellerdata=localStorage.getItem('seller');
              console.log("data form locaal",this.sellerdata)
-             this.sellerstore=JSON.parse(this.sellerdata)
+             this.sellerstore=JSON.parse(this.sellerdata)[0]
              console.log("sellerstore",this.sellerstore)
             this.sellername=this.sellerstore.name
              console.log("seller name",this.sellername)
@@ -35,11 +36,6 @@ export class NavbarComponent implements OnInit {
           this.type='normal'
         }
       }
-
     })
   }
-  ngOnInit(): void {
-    this.getseller();
-  }
-
 }

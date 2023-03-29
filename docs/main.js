@@ -210,12 +210,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SellerService", function() { return SellerService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "IheW");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "iInd");
+
 
 
 
 class SellerService {
-    constructor(http) {
+    constructor(http, route) {
         this.http = http;
+        this.route = route;
     }
     saveseller(body) {
         return this.http.post(`http://localhost:3000/seller`, body);
@@ -224,14 +227,14 @@ class SellerService {
         return this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`);
     }
 }
-SellerService.ɵfac = function SellerService_Factory(t) { return new (t || SellerService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
+SellerService.ɵfac = function SellerService_Factory(t) { return new (t || SellerService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
 SellerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: SellerService, factory: SellerService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SellerService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }]; }, null); })();
 
 
 /***/ }),
@@ -1360,11 +1363,9 @@ function NavbarComponent_div_12_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NavbarComponent_ul_14_Template(rf, ctx) { if (rf & 1) {
-    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "ul", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "li", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavbarComponent_ul_14_Template_a_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r3.getseller(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Seller");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1386,7 +1387,7 @@ function NavbarComponent_ul_14_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NavbarComponent_ul_15_Template(rf, ctx) { if (rf & 1) {
-    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "ul", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "li", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 22);
@@ -1406,7 +1407,7 @@ function NavbarComponent_ul_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavbarComponent_ul_15_Template_a_click_12_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6); const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r5.logout(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavbarComponent_ul_15_Template_a_click_12_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r3.logout(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "LogOut");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1426,7 +1427,7 @@ class NavbarComponent {
         this.Router.navigate(['/']);
         this.type = 'normal';
     }
-    getseller() {
+    ngOnInit() {
         this.Router.events.subscribe((res) => {
             console.log("responce for route", res.url);
             if (res.url) {
@@ -1435,7 +1436,7 @@ class NavbarComponent {
                     console.log("this is seller");
                     this.sellerdata = localStorage.getItem('seller');
                     console.log("data form locaal", this.sellerdata);
-                    this.sellerstore = JSON.parse(this.sellerdata);
+                    this.sellerstore = JSON.parse(this.sellerdata)[0];
                     console.log("sellerstore", this.sellerstore);
                     this.sellername = this.sellerstore.name;
                     console.log("seller name", this.sellername);
@@ -1447,12 +1448,9 @@ class NavbarComponent {
             }
         });
     }
-    ngOnInit() {
-        this.getseller();
-    }
 }
 NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"])); };
-NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 16, vars: 3, consts: [[1, "container-fluid"], [1, "row"], [1, "navbar", "navbar-expand-md", "bg-warning", "navbar-warning"], [1, "col-md-2", "text-center", "pt-3"], ["href", "", 1, "navbar-brand"], [1, ""], ["type", "button", "data-bs-toggle", "collapse", "data-bs-target", "#mynav", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "mynav", 1, "collapse", "navbar-collapse"], [1, "col-md-7"], [4, "ngIf"], [1, "col-md-3"], ["class", "navbar-nav ", 4, "ngIf"], ["role", "search", 1, "d-flex"], ["type", "search", "placeholder", "Search", "aria-label", "Search", 1, "form-control", "m-2"], ["type", "submit", 1, "btn", "btn-primary", "m-2"], [1, "navbar-nav"], [1, "nav-item"], ["routerLink", "seller", 1, "nav-link", 3, "click"], ["href", "", 1, "nav-link"], ["routerLink", "user", 1, "nav-link"], ["routerLink", "", 1, "nav-link"], [1, "nav-link"], ["routerLink", "/addproduct", 1, "nav-link"], ["routerLink", "/list", 1, "nav-link"], [1, "nav-link", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
+NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 16, vars: 3, consts: [[1, "container-fluid"], [1, "row"], [1, "navbar", "navbar-expand-md", "bg-warning", "navbar-warning"], [1, "col-md-2", "text-center", "pt-3"], ["href", "", 1, "navbar-brand"], [1, ""], ["type", "button", "data-bs-toggle", "collapse", "data-bs-target", "#mynav", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "mynav", 1, "collapse", "navbar-collapse"], [1, "col-md-7"], [4, "ngIf"], [1, "col-md-3"], ["class", "navbar-nav ", 4, "ngIf"], ["role", "search", 1, "d-flex"], ["type", "search", "placeholder", "Search", "aria-label", "Search", 1, "form-control", "m-2"], ["type", "submit", 1, "btn", "btn-primary", "m-2"], [1, "navbar-nav"], [1, "nav-item"], ["routerLink", "seller", 1, "nav-link"], ["href", "", 1, "nav-link"], ["routerLink", "user", 1, "nav-link"], ["routerLink", "", 1, "nav-link"], [1, "nav-link"], ["routerLink", "/selleraddproduct", 1, "nav-link"], ["routerLink", "/sellerlist", 1, "nav-link"], [1, "nav-link", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "nav", 2);
@@ -1688,20 +1686,26 @@ class SellerAuthComponent {
         this.userseller.saveseller(this.sellersignupform.value).subscribe((res) => {
             console.log("save seller", res);
             localStorage.setItem('seller', JSON.stringify(res));
-            this.route.navigate(['/list']);
+            this.route.navigate(['/sellerhome']);
         });
+    }
+    reloadseller() {
+        if (localStorage.getItem('seller')) {
+            this.route.navigate(['/sellerhome']);
+        }
     }
     sellerlogin(value) {
         console.log(this.sellerloginform.value);
         this.userseller.signinseller(this.sellerloginform.value).subscribe((res) => {
-            console.log("sign in", res);
-            this.route.navigate(['/list']);
-            //         if(res && res.body && res.body.length===1){
-            //   localStorage.setItem('seller',JSON.stringify(res.body));
-            //   this.route.navigate(['/list'])
-            // }else{
-            //     // Swal.fire("emailid and Password is incorrect")
-            // }
+            console.log("this is servie res", res);
+            if (res) {
+                console.log("user log in");
+                localStorage.setItem('seller', JSON.stringify(res));
+                this.route.navigate(['/sellerhome']);
+            }
+            else {
+                console.log("login failed");
+            }
         });
     }
     forsignup() {
@@ -1771,8 +1775,8 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
     { path: 'seller', component: _seller_auth_seller_auth_component__WEBPACK_IMPORTED_MODULE_5__["SellerAuthComponent"] },
-    { path: 'addproduct', component: _add_product_add_product_component__WEBPACK_IMPORTED_MODULE_2__["AddProductComponent"] },
-    { path: 'list', component: _productlist_productlist_component__WEBPACK_IMPORTED_MODULE_4__["ProductlistComponent"] },
+    { path: 'selleraddproduct', component: _add_product_add_product_component__WEBPACK_IMPORTED_MODULE_2__["AddProductComponent"] },
+    { path: 'sellerlist', component: _productlist_productlist_component__WEBPACK_IMPORTED_MODULE_4__["ProductlistComponent"] },
     { path: 'sellerhome', component: _sellerhome_sellerhome_component__WEBPACK_IMPORTED_MODULE_6__["SellerhomeComponent"] },
     { path: 'user', component: _user_auth_user_auth_component__WEBPACK_IMPORTED_MODULE_8__["UserAuthComponent"] },
     { path: 'updateproduct/:id', component: _update_product_update_product_component__WEBPACK_IMPORTED_MODULE_7__["UpdateProductComponent"] },

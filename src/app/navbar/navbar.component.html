@@ -20,7 +20,7 @@
 
     <div class="col-md-3">
             <ul class="navbar-nav " *ngIf="type === 'normal'">
-                <li class="nav-item"><a class="nav-link " routerLink="seller" (click)="getseller()">Seller</a></li>
+                <li class="nav-item"><a class="nav-link " routerLink="seller" >Seller</a></li>
                 <li class="nav-item"><a class="nav-link " href="">Home</a></li>
                 <li class="nav-item"><a  class="nav-link " routerLink="user">Login</a></li>
                 <li class="nav-item"><a class="nav-link " routerLink="">Card</a></li>
@@ -28,8 +28,8 @@
 
             <ul class="navbar-nav " *ngIf="type === 'seller'">
               <li class="nav-item "><a class="nav-link " >{{sellername|uppercase}}</a></li>
-              <li class="nav-item "><a class="nav-link " routerLink="/addproduct">+Product</a></li>
-              <li class="nav-item "><a  class="nav-link " routerLink="/list">List</a></li>
+              <li class="nav-item "><a class="nav-link " routerLink="/selleraddproduct">+Product</a></li>
+              <li class="nav-item "><a  class="nav-link " routerLink="/sellerlist">List</a></li>
               <li class="nav-item "><a class="nav-link " (click)="logout()">LogOut</a></li>
           </ul>
 

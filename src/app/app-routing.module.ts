@@ -12,8 +12,8 @@ import { VeiwProductComponent } from './veiw-product/veiw-product.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'seller',component:SellerAuthComponent},
-  {path:'addproduct',component:AddProductComponent},
-  {path:'list',component:ProductlistComponent},
+  {path:'selleraddproduct',component:AddProductComponent},
+  {path:'sellerlist',component:ProductlistComponent},
   {path:'sellerhome',component:SellerhomeComponent},
   {path:'user',component:UserAuthComponent},
   {path:'updateproduct/:id',component:UpdateProductComponent},
