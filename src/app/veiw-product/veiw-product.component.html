@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row m-3" *ngIf="Productdetail">
+        <div class="card mb-3" style="max-width:100%;">
+            <div class="row no-gutters p-2">
+                <div class="col-md-5 m-2">
+                    <img src="{{Productdetail.image}}" height="550px" class="w-100" alt="">
+                </div>
+              <div class="col-md-6 m-2">
+                <!-- <div class="card-header"> -->
+                    <h1 class="card-title mt-5 text-center">{{Productdetail.name}}</h1>
+                <!-- </div> -->
+                <div class="card-body ">
+                  <p class="card-text h4">Category : {{  Productdetail.category}}</p>
+                  <p class="h5">Color : {{Productdetail.color}}</p>
+                  <p class="h5">Prize : {{Productdetail.price | currency:'INR'}} </p>
+                  <p class="card-info  h5">Description :   {{  Productdetail.description}}</p>
+                   <br>
+                 <div class="box"> Free Dilivery </div>
+                  
+                  <p class="card-text mt-3"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+                  <div class="footer">
+                    <button mat-raised-button color="warn" class="m-2">Remove form card</button>
+                    <button mat-raised-button color="accent" class="m-2">ADD To Card</button>
+                  </div>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

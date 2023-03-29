@@ -7,21 +7,39 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  type:string="normal";
+  type:string='normal';
+  sellername:any;
+  sellerdata:any;
+  sellerstore:any;
   constructor(private Router:Router) { }
-
-  ngOnInit(): void {
+  logout(){
+    localStorage.clear();
+    this.Router.navigate(['/']);
+    this.type='normal';
+  }
+  getseller(){
     this.Router.events.subscribe((res:any)=>{
-      console.log(res.url);
+      console.log("responce for route",res.url);
       if(res.url){
-        console.log(res.url);
+        console.log("url",res.url);
         if(localStorage.getItem('seller')&& res.url.includes('seller')){
              console.log("this is seller");
-             this.type="seller" 
+             this.sellerdata=localStorage.getItem('seller');
+             console.log("data form locaal",this.sellerdata)
+             this.sellerstore=JSON.parse(this.sellerdata)
+             console.log("sellerstore",this.sellerstore)
+            this.sellername=this.sellerstore.name
+             console.log("seller name",this.sellername)
+             this.type='seller' ;
+        }else{
+          this.type='normal'
         }
       }
 
     })
+  }
+  ngOnInit(): void {
+    this.getseller();
   }
 
 }

@@ -15,7 +15,8 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
-import { UpdateProductComponent } from './update-product/update-product.component'
+import { UpdateProductComponent } from './update-product/update-product.component';
+import { VeiwProductComponent } from './veiw-product/veiw-product.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     ProductlistComponent,
     SellerhomeComponent,
     UserAuthComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    VeiwProductComponent
   ],
   imports: [
     BrowserModule,

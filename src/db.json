@@ -18,16 +18,22 @@
       "id": 8
     },
     {
-      "name": "SAUMYA",
-      "email": "saumyadhumal@gmail.com",
-      "password": "abc@123",
-      "id": 9
-    },
-    {
       "name": "shrutika",
       "email": "shrutika@gmail.com",
       "password": "shrutika",
+      "id": 9
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
       "id": 10
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 11
     }
   ],
   "products": [

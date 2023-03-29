@@ -1,0 +1,24 @@
+.container-fluid{
+    height: 100vh;
+}
+.card-title{
+    font-size:46px;
+    color: blueviolet;
+    letter-spacing: 2px;
+}
+.box{
+   height: 40px;
+   width:150px;
+   background-color: rgb(233, 218, 248);
+   color: blueviolet;
+   font-size: 21px;
+   text-align: center;
+   padding-top:10px;
+   border-radius: 100px;
+}
+.card-body {
+margin-top:50px;
+}
+.footer{
+    margin-top:50px;
+}
