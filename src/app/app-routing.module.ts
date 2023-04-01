@@ -8,6 +8,7 @@ import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { VeiwProductComponent } from './veiw-product/veiw-product.component';
+import { SerchComponent } from './serch/serch.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -16,8 +17,9 @@ const routes: Routes = [
   {path:'sellerlist',component:ProductlistComponent},
   {path:'sellerhome',component:SellerhomeComponent},
   {path:'user',component:UserAuthComponent},
-  {path:'updateproduct/:id',component:UpdateProductComponent},
-  {path:'veiw/:id',component:VeiwProductComponent}
+  {path:'sellerupdateproduct/:id',component:UpdateProductComponent},
+  {path:'veiw/:id',component:VeiwProductComponent},
+  {path:'search/:value',component:SerchComponent}
 ];
 
 @NgModule({

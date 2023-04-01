@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row m-3 justify-content-center" *ngFor="let i of similarProducts">
+        <div class="card mb-3" style="max-width:70%;">
+            <div class="row no-gutters p-2">
+                <div class="col-md-5 m-2 ">
+                    <div class="row justify-content-center">
+                        <img src="{{i.image}}" routerlink="veiw/{{i.id}}" height="200px" class="w-75 m-2" alt=""> 
+                    </div>
+                </div>
+              <div class="col-md-6 m-2">
+                    <h1 class="card-title mt-1 text-center">{{i.name}}</h1>
+                <div class="card-body ">
+                  <p class="card-text ">Category : {{  i.category}}</p>
+                  <p class="">Color : {{i.color}}</p>
+                  <p class="">Prize : {{i.price | currency:'INR'}} </p>
+                  <p class="card-info ">Description :   {{  i.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

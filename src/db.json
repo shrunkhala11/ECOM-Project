@@ -52,6 +52,18 @@
       "email": "soham@gmail.com",
       "password": "soham",
       "id": 14
+    },
+    {
+      "name": "katik",
+      "email": "kartik@gmail.com",
+      "password": "kartik",
+      "id": 15
+    },
+    {
+      "name": "SAUMYA",
+      "email": "saumya@gmail.com",
+      "password": "saumya",
+      "id": 16
     }
   ],
   "products": [
@@ -126,6 +138,20 @@
       "color": "All color",
       "description": "favourite  toy of childrenvce",
       "image": "https://d3nn873nee648n.cloudfront.net/900x600/10413/19-SM290679.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Ujwala",
+      "email": "ujwala23@gmail.com",
+      "password": "ujwala"
+    },
+    {
+      "name": "ankita",
+      "email": "ankita@gmail.com",
+      "password": "ankita",
+      "id": 2
     }
   ]
 }

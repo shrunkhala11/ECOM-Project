@@ -26,4 +26,7 @@ export class ProductService {
   updateproduct(id:number,body:Products){
     return this.http.put(`http://localhost:3000/products/${id}`,body)
   }
+  searchingProducts(value:any){
+    return this.http.get(`http://localhost:3000/products?q=${value}`)
+  }
 }

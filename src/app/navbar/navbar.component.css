@@ -4,3 +4,21 @@
     font-size: 22px;
     cursor: pointer;
 }
+.sserchdropddown{
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    width:620px;
+  }
+  .sserchdropddown ul{
+    list-style: none;
+  }
+  .sserchdropddown li {
+    padding:5px;
+    list-style-type: none;
+    border: 1px solid #ddd;
+  }
+  .sserchdropddown li a{
+    cursor: pointer;
+    margin-left: 3px;
+    text-decoration: none;
+  }

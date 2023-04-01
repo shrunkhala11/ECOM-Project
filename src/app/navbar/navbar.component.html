@@ -11,9 +11,14 @@
     <div class="col-md-7" >
         <div *ngIf="type === 'normal'">
           <form class="d-flex" role="search" >
-            <input class="form-control m-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-primary m-2" type="submit">Search</button>
+            <input class="form-control m-2" #productname type="search" (keyup)="serchrelatedproduct($event)" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary m-2" type="submit" (click)="OnSerchproduct(productname.value)">Search</button>
           </form>
+          <ul class="sserchdropddown" *ngIf="similarproducts">
+            <li *ngFor="let i of similarproducts">
+              <a href="" >{{i.name}}</a>
+            </li>
+          </ul>
         </div>
     </div>
     
@@ -23,17 +28,23 @@
                 <li class="nav-item"><a class="nav-link " routerLink="seller" >Seller</a></li>
                 <li class="nav-item"><a class="nav-link " href="">Home</a></li>
                 <li class="nav-item"><a  class="nav-link " routerLink="user">Login</a></li>
-                <li class="nav-item"><a class="nav-link " routerLink="">Card</a></li>
+                <li class="nav-item"><a class="nav-link " routerLink="">Cart</a></li>
             </ul>
 
-            <ul class="navbar-nav " *ngIf="type === 'seller'">
+            <ul class="navbar-nav " *ngIf="type == 'seller'">
               <li class="nav-item "><a class="nav-link " >{{sellername|uppercase}}</a></li>
               <li class="nav-item "><a class="nav-link " routerLink="/selleraddproduct">+Product</a></li>
               <li class="nav-item "><a  class="nav-link " routerLink="/sellerlist">List</a></li>
               <li class="nav-item "><a class="nav-link " (click)="logout()">LogOut</a></li>
           </ul>
 
-
+          <ul class="navbar-nav " *ngIf="type === 'user'">
+            <li class="nav-item "><a class="nav-link " >{{username|uppercase}}</a></li>
+            <li class="nav-item "><a class="nav-link " routerLink="/">home</a></li>
+            <li class="nav-item "><a class="nav-link " routerLink="/seller">seller</a></li>
+            <li class="nav-item "><a  class="nav-link " routerLink="">My Orders</a></li>
+            <li class="nav-item "><a class="nav-link " (click)="logout()">LogOut</a></li>
+        </ul>
             </div>
     </div>
 </nav>

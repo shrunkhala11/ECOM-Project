@@ -16,7 +16,8 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
-import { VeiwProductComponent } from './veiw-product/veiw-product.component'
+import { VeiwProductComponent } from './veiw-product/veiw-product.component';
+import { SerchComponent } from './serch/serch.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { VeiwProductComponent } from './veiw-product/veiw-product.component'
     SellerhomeComponent,
     UserAuthComponent,
     UpdateProductComponent,
-    VeiwProductComponent
+    VeiwProductComponent,
+    SerchComponent
   ],
   imports: [
     BrowserModule,
